@@ -3,48 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site developpeur</title>
-    <link rel="favicon.ico" href="image/x-icon">
+    <meta name="description" content="javascript developer">
+    <title>Site développeur</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <header>
         <h1 lang="en">
-            Développeur javascript
+            <span aria-hidden="true">📁</span>javascript developer
         </h1>
+        <nav>
+            <ul>
+                <li><a href="#">Acceuil</a></li>
+                <li><a href="#">A propos</a></li>
+                <li><a href="#">Service</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
+        <!-- exception qui confirme la règle -->
+        <div role="region" class="gallery-content">
+            <!-- source pour les image -->
+            
+          
+                <ul  class="gallery-grid">
+                    <li><img loading="lazy" src="https://www.pokepedia.fr/images/2/2c/Damien-ROSA.png" alt="Damien"></li>
+                    <li><img loading="lazy" src="https://www.pokepedia.fr/images/f/fc/Spectra-ROSA.png" alt="Spectra"></li>
+                    <li><img loading="lazy" src="https://www.pokepedia.fr/images/7/75/Glacia-ROSA.png" alt="Glacia"></li>
+                    <li><img loading="lazy" src="https://www.pokepedia.fr/images/f/f9/Aragon-ROSA.png" alt="Aragon" ></li>
+                </ul>
+          
+        </div>
+
+
         <picture>
-            <source media="(min-width:650px)" srcset="./asset/undraw_developer-activity_dn7p.svg">
-             <source media="(min-width:465px)" srcset="./asset/undraw_developer-activity_dn7p.svg"> 
+          <!-- <source media="(min-width:65rem)" srcset="./asset/cover.svg">
+            <source media="(min-width:46.5rem)" srcset="./asset/cover.svg">  -->
             <img src="./asset/undraw_developer-activity_dn7p.svg" alt="Cover">
-          </picture>
+        </picture> 
+
         <article>
-            <h2>Description</h2>
+            
+            <h2>
+                
+                Description du projet
+            </h2>
             <details>
-                <summary>Liste des langages</summary>
+                <summary>
+                    <h3>
+                        Liste des langages</h3>
+                </summary>
                 <ul>
-                <li><strong>html</strong></li>
-                <li><strong>css</strong></li>
-                <li><strong>js</strong></li>
-                <li><strong>php</strong></li>
-            </ul>
+                    <li><strong>html</strong></li>
+                    <li><strong>css</strong></li>
+                    <li><strong>js</strong></li>
+                    <li><strong>php</strong></li>
+                    <li><strong><a target="blank" href="https://icons8.com/icon/106564/github">GitHub icône par Icons8</a></strong></li>
+                </ul>
             </details>
-            <article>
-                <h2>item 1</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi maiores pariatur voluptatum quibusdam ullam repudiandae facilis ipsum saepe necessitatibus ducimus, facere impedit vitae, accusamus, et reprehenderit asperiores. Perspiciatis, nam ut!</p>
-            </article>
-            <article>
-                <h2>item 2</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam obcaecati esse vitae tempore earum, possimus rem nemo, illo dignissimos perferendis fugit, facilis voluptatum harum placeat iusto corporis libero maxime quas!</p>
-            </article>
         </article>
+        <article>
+            <h2>Compatibilité</h2>
+            <p>During this last day, however, little by little the gangways were cleared, the scaffoldings were taken down, 
+                the fly-wheel cranes disappeared, the fixing of the engines was accomplished,</p>
+        </article>
+
+        <article>
+            <h2>Flexibilité</h2>
+            <p>During this last day, however, little by little the gangways were cleared,
+                 the scaffoldings were taken down, the fly-wheel cranes disappeared, the fixing of the engines was accomplished,
+
+            </p>
+        </article>
+        
 
     </main>
     <footer>
         <p>
-            &copy; - MIT -  <time datetime="01-01-2025">2025</time>
+            &copy; - MIT - <time datetime="2025">2025</time>
         </p>
     </footer>
+    <script src="./src/app.js"></script>
 </body>
 </html>

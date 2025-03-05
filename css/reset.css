@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 html {
     font-size: 62.5%; /* 1rem = 10px */
 }
@@ -24,8 +25,20 @@ h1, h2, h3, h4, h5, h6 {
     font-size: xx-large;
     margin: 0;
 }
-
-p, figure {
-    margin: 0 ;
+p, figure, ol, ul, details summary{
+    padding: 0;
+    list-style: none;
+    margin: 0;
 }
-
+details summary::-webkit-details-marker {
+    display: none;   /* Masque la flèche pour les navigateurs WebKit (comme Chrome et Safari) */
+    
+}
+details summary{
+    cursor: pointer;
+}
+img{
+    display: inline-block;
+    vertical-align: middle;
+    object-fit: cover;
+}
