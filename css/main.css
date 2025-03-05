@@ -2,89 +2,177 @@
 
 /* theme */
 
-
-header{
-
-    h1{
-        background-color: #222;
-        line-height: 8rem;
-        color: #fff;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: bolder;
-    }
-}
-.gallery-content{
-     max-width: 90.0rem;
-    margin: 5rem auto 2rem;
-
-    .gallery-grid{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-    }
-    .gallery-grid li img{
-        width: 100%;
-        filter: drop-shadow(0 0 0.9rem #dc143c);
-    }
-  }  
-picture{
-
-        display: flex;
-        max-width : 60rem;;
-        justify-content: center;
-        margin: 0 auto 1rem;
-        
-        img{
-            width: 100%;
-            filter: drop-shadow(0 0 0.9rem #dc143c);
-        }
+header {
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  align-items: center;
+  h1 {
+    background-color: #222;
+    line-height: 8.5rem;
+    color: #fff;
+    /* text-align: center; */
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2.5em;
+    padding-left: 2rem;
     
-       
-}
-article{
-    max-width: 80rem;
-    margin: 0 auto 1rem;
-    h2{
-        width: max-content;
-        padding: .5rem 1rem;
-        background-color: #000;
-        color: #fff;
-        font-size: x-large;
-    }
-    p{
-        border-top: solid .1rem #222;
-        padding: 1rem;
-        background-color: #d4ced3;
-    }
+   
+  }
+ 
+  nav ul{
+    display: flex;
+    align-items: center;
+ }
+  nav ul li *{
+    display: block;
+    color: #fff;
+    text-align: center;
+    transition: all .8s ease-in-out;
 
-}
-details summary{
-    background-color: #ff00b7;
-    columns: #fff;
-    padding: 1rem;
-    h3 img{
-        fill: invert(100%) ;
-    }
+  }
+  nav ul li {
+    width: 15rem;
+    /* background-color:  #ccc; */
+    line-height: 8.5rem;
+    text-transform: uppercase;
+  }
+  /* survole */
+  nav ul li:hover a{
+    background-color:  #42414d;
+    color: #fff;
     
+  }
+ 
+  
 }
-details ul li{
-        text-transform: uppercase;
-        padding: 1rem;
-        background-color: #fafafa;
-    }
-details ul li:nth-child(2n + 1){
-    background-color: #0be7d9;
-    padding: 1rem;
+.gallery-content {
+  max-width: 90rem;
+  margin: 5rem auto 2rem;
 
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .gallery-grid li img {
+    width: 100%;
+    filter: drop-shadow(0 0 0.9rem #dc143c);
+  }
+}
+picture {
+  max-width: 60rem;
+  display: flex;
+  margin: 0 auto 1rem;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100%;
+  }
+}
+article {
+  max-width: 80rem;
+  margin: 0 auto 2rem;
+  h2 {
+    width: max-content;
+    padding: 0.5rem 1rem;
+    background-color: #222;
+    color: #fff;
+    font-size: x-large;
+  }
+  p {
+    border-top: solid 0.1rem #222;
+    padding: 1rem;
+    background-color: #efecec;
+  }
+}
+details summary {
+  background-color: #a40909;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  h3 img {
+    filter: invert(100%);
+
+  }
+  
+
+}
+details ul li {
+  text-transform: uppercase;
+  padding: 1rem;
+  background-color: #fafafa;
+}
+details ul li:nth-child(2n + 1) {
+  background-color: #a29bfe;
+  padding: 1rem;
 }
 details > summary h3::before{
-    content: " +📂 ";
-    color: #fff;
+  content: " +📂 ";
+  color: #fff;
+}
+details[open] > summary h3::before{
+  content: " -📁 ";
+} 
+footer * {
+  text-align: center;
+}
+/* mobile */
+@media screen and (max-width: 90.0rem){
+  body{
+    margin: 1%;
   }
-  details[open] > summary h3::before{
-    content: " -📁 ";
+    header{ 
+      flex-direction: column; 
+      h1{
+        font-size: 2rem;
+      }
+    }
+    .gallery-content {
+      width: auto;
+      margin: 5rem auto 2rem;
+    
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+      
+    }
+    nav{
+      /* display: none; */
+    }
+    nav ul{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   }
+
+   details summary {
+     h3{
+       font-size: 2rem;
+  
+    }
+    
+  
   }
-footer *{
-    text-align: center;
+}
+@media screen and (orientation: landscape){
+  header{ 
+    flex-direction: row; 
+    h1{
+      font-size: 2rem;
+    }
+  }
+  nav ul{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+ }
+ details summary {
+      h3{
+        font-size: xx-large;
+
+    }
+  }
 }
